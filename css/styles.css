@@ -595,12 +595,20 @@ input {
 .backdrop {
   height: 100%;
   width: 100%;
-  /* background-color: rgba(0, 0, 0, 0.4); */
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: fixed;
   top: 0;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
 
 .modal {
@@ -724,6 +732,12 @@ input {
   line-height: 1.17;
 }
 
+.modal-checkbox {
+}
+
+.user-privacy {
+}
+
 .modal-button {
   border-radius: 4px;
   padding: 16px 32px;
@@ -768,24 +782,45 @@ input {
   border-color: #4d5ae5;
 }
 
-.modal-text::placeholder {
+.modal-checkbox:checked + .checkbox-text .fake {
+  background-color: #404bbf;
+  fill: #f4f4fd;
+  border: none;
 }
 
-.modal-checkbox {
+.user-privacy {
 }
 
-/* .line-span {
+.checkbox-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: flex;
+  align-items: center;
+}
+
+.fake {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  ransition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
+  margin-right: 8px;
 }
 
-<span class="line-span"></span> */
+.privacy-link {
+  color: #4d5ae5;
+  margin-left: ;
+}
+
+.check-icon {
+}
