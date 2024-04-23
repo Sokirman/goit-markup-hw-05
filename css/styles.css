@@ -782,7 +782,7 @@ input {
   border-color: #4d5ae5;
 }
 
-.modal-checkbox:checked + .checkbox-text .fake {
+.modal-checkbox:checked + .checkbox-text .fake-checkbox {
   background-color: #404bbf;
   fill: #f4f4fd;
   border: none;
@@ -802,7 +802,7 @@ input {
   align-items: center;
 }
 
-.fake {
+.fake-checkbox {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
