@@ -658,8 +658,8 @@ input {
   border: none;
 }
 
-.modal-btn:hover,
-.modal-btn:focus + .modal-btn-icon {
+.modal-btn:hover > .modal-btn-icon,
+.modal-btn:focus > .modal-btn-icon {
   fill: #ffffff;
 }
 
@@ -798,8 +798,6 @@ input {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  display: flex;
-  align-items: center;
 }
 
 .fake-checkbox {
